@@ -2,12 +2,18 @@ import  styled from "styled-components"
 
 const Footer = () => {
   return (
-    <Foot>@Copyright Footer</Foot>
+    <Foot>
+        <h5>@Copyright 2023 All rights reserved</h5>
+    </Foot>
   )
 }
 
 export default Footer
 
 const Foot=styled.footer`
-    background-color: rgba(0,0,0,0.7);
+background-color: #2E2E2E;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 `

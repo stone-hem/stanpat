@@ -25,6 +25,11 @@ const Home = () => {
         <h3>Featured Projects</h3>
         <Body>
             <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
         </Body>
       </Featured>
     </Section>
@@ -34,11 +39,17 @@ const Home = () => {
 export default Home;
 
 const Card=styled.div`
-    
+    width: 200px;
+    height: 200px;
+    border: 1px solid #0476D0;
+    border-radius: 8px;
 `
 
 const Body=styled.div`
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 `
 
 const Featured=styled.div`
@@ -49,6 +60,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+gap: 20px;
+border-radius: 8px;
 `
 
 const About = styled.section`

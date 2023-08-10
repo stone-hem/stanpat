@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import menu from "../assets/icons/menu.png";
-import logo from "../assets/icons/logo.png";
+import menu from "../assets/images/menu.png";
+import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 
 export default function Navigation({ toggle }) {

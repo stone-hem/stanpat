@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import close from '../assets/icons/close.png'
+import close from '../assets/images/close.png'
 
 function SideMobile({isOpen,toggle}) {
   return (
