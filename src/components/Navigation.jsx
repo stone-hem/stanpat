@@ -14,7 +14,7 @@ export default function Navigation({ toggle }) {
   return (
     <>
       <Header>
-        <h5>Hello!!! Find us on +254712345678</h5>
+        <h5>Hello!!! Find us on +254723810154</h5>
       </Header>
       <Container className={navColorChange ? "changeColor" : ""}>
         <img src={logo} alt="" className="logo" />
@@ -125,8 +125,7 @@ const Icon = styled.span`
     padding: 8px;
     border: none;
     border-radius: 8px;
-    height: 40px;
-    width: 40px;
+    height:60px ;
     background-color: #0476d0;
     @media screen and (max-width: 768px) {
       display: none;

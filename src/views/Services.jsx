@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import service from "../assets/images/service.jpg";
+import electricity from "../assets/images/electricity.jpg";
+import light from "../assets/images/light.jpg";
+import workers from "../assets/images/workers.jpg";
+import plumb from "../assets/images/plumb.jpg";
+
 const Services = () => {
   return (
     <Section>
@@ -11,27 +15,27 @@ const Services = () => {
       </p>
       <Grid>
         <Service>
-          <Image><img src={service}alt="" /></Image>
-          <h2>Multidisciplinary Engineering Capability</h2>
-          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <Image><img src={light}alt="" /></Image>
+          <h2>Electrical and mechanical consulting services</h2>
+          <p>We have the experience on services design, preparation of Bills of Quantities,tendering supervising and testing and commissioning Project.</p>
           <button>Read More...</button>
         </Service>
         <Service>
-          <Image><img src={service}alt="" /></Image>
-          <h2>Multidisciplinary Engineering Capability</h2>
-          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <Image><img src={electricity}alt="" /></Image>
+          <h2>Energy Audit</h2>
+          <p>We offer services to determine the status of your power and advice on the best way to reduce consumption and improve the power.</p>
           <button>Read More...</button>
         </Service>
         <Service>
-          <Image><img src={service}alt="" /></Image>
-          <h2>Multidisciplinary Engineering Capability</h2>
-          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <Image><img src={workers}alt="" /></Image>
+          <h2>Electrical Installations</h2>
+          <p>Coupled with engineers and qualified technicians we offer quality and value to your project .We design and build to your satisfaction.</p>
           <button>Read More...</button>
         </Service>
         <Service>
-          <Image><img src={service}alt="" /></Image>
-          <h2>Multidisciplinary Engineering Capability</h2>
-          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <Image><img src={plumb}alt="" /></Image>
+          <h2>Plumbing Installations</h2>
+          <p>Coupled with engineers and qualified technicians we offer quality and value to your project .We design and build to your satisfaction.</p>
           <button>Read More...</button>
         </Service>
       </Grid>
@@ -43,17 +47,18 @@ export default Services;
 
 const Image=styled.div`
   flex:5;
-  max-width: 200px;
-  max-height: 100%;
+  height: 250px;
+  width: 100%;
   img{
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
   }
 `
 
 const Service=styled.div`
   height: 400px;
+  width: 100%;
   border: 1px solid green;
   border-radius: 8px;
   display:flex;
@@ -62,16 +67,20 @@ const Service=styled.div`
   justify-content: center;
   flex-direction:column;
   h2{
-    flex:1;
+    height: 50px;
     text-align: center;
   }
   p{
-    flex:1;
+    height: 50px;
+    min-width: 80%;
     text-align: center;
+    @media screen and (max-width:768px){
+      width: 100%;
+  }
   }
   button{
     width: 100%;
-    flex:1;
+    height: 50px;
     color:white;
     background:#0476d0;
     border:none;

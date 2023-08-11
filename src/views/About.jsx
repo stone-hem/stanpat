@@ -4,7 +4,6 @@ import mission from "../assets/images/mission.png";
 import purpose from "../assets/images/purpose.png";
 import vision from "../assets/images/vision.png";
 
-
 const About = () => {
   return (
     <Section>
@@ -13,21 +12,21 @@ const About = () => {
         <Content>
           <h3>Who We Are</h3>
           <p>
-            We’re a leading engineering, technology and energy services company
-            that helps our clients meet the world’s evolving energy needs. We
-            use our engineering know-how and our consultancy expertise to
-            design, build, and operate world-class energy and infrastructural
-            facilities that are engineered for safety and optimal efficiency. We
-            operate in a range of markets and work across the entire asset
-            life-cycle – from design to decommissioning.
+            StanPat Global Ltd was registered in 2013 under the Companies Act
+            (Cap.486) (Registration No. CPR/2013/109589). We specialize in
+            offering Mechanical and Electrical Engineering services to our
+            clients. Our team of professionals includes Mechanical Engineers,
+            Electrical Engineers, and Environmental Professionals, Project
+            managers, droughts-men and other support staff. We are equipped with
+            the latest technology softwares for design and simulations including
+            Air conditioning, Pump sizing, AutoCAD and ArchiCAD.
           </p>
-
           <p>
-            These competencies, supported by flexible commercial models, robust
-            local delivery, and a technology neutral approach, set us apart. Our
-            operations are heavily dependent on our ability to attract, retain
-            and lead the right level of skilled and experienced personnel. Core
-            to our offering is our distinctive, delivery-focused culture.
+            The varied experiences of the staff and Consultants we engage at
+            StanPat Global Ltd give the firm a blend of unique capabilities in
+            the fields of practice. At different times various clients have
+            contracted us to render professional services for projects of
+            varying nature, which we have successfully executed.
           </p>
         </Content>
         <Image>
@@ -65,14 +64,11 @@ const About = () => {
           </p>
         </Card>
       </Values>
-     
     </Section>
   );
 };
 
 export default About;
-
-
 
 const Card = styled.section`
   border: 1px solid #0476d0;
@@ -94,7 +90,7 @@ const Values = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   margin-bottom: 40px;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 30px;
   }
@@ -121,7 +117,7 @@ const Container = styled.section`
   display: flex;
   gap: 20px;
   padding: 20px 100px;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 5px;
   }
