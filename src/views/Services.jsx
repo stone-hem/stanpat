@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import service from "../assets/images/service.jpg";
 const Services = () => {
   return (
     <Section>
@@ -9,10 +10,30 @@ const Services = () => {
         conception through to commissioning and facility management.
       </p>
       <Grid>
-        <Service></Service>
-        <Service></Service>
-        <Service></Service>
-        <Service></Service>
+        <Service>
+          <Image><img src={service}alt="" /></Image>
+          <h2>Multidisciplinary Engineering Capability</h2>
+          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <button>Read More...</button>
+        </Service>
+        <Service>
+          <Image><img src={service}alt="" /></Image>
+          <h2>Multidisciplinary Engineering Capability</h2>
+          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <button>Read More...</button>
+        </Service>
+        <Service>
+          <Image><img src={service}alt="" /></Image>
+          <h2>Multidisciplinary Engineering Capability</h2>
+          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <button>Read More...</button>
+        </Service>
+        <Service>
+          <Image><img src={service}alt="" /></Image>
+          <h2>Multidisciplinary Engineering Capability</h2>
+          <p>Our teams provide engineering solutions across the asset life cycle. From conceptual studies and FEED, to ...</p>
+          <button>Read More...</button>
+        </Service>
       </Grid>
     </Section>
   );
@@ -20,9 +41,39 @@ const Services = () => {
 
 export default Services;
 
+const Image=styled.div`
+  flex:5;
+  max-width: 200px;
+  max-height: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`
+
 const Service=styled.div`
-  height: 350px;
+  height: 400px;
   border: 1px solid green;
+  border-radius: 8px;
+  display:flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  h2{
+    flex:1;
+  }
+  p{
+    flex:1;
+  }
+  button{
+    width: 100%;
+    flex:1;
+    color:white;
+    background:#0476d0;
+    border:none;
+  }
 `
 
 const Grid=styled.div`
@@ -32,6 +83,7 @@ const Grid=styled.div`
   grid-column-gap: 20px;
   width: 100%;
   padding: 20px;
+  margin-bottom: 40px;
 `
 
 const Section = styled.section`

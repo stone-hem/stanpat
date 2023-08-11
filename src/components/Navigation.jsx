@@ -38,9 +38,9 @@ export default function Navigation({ toggle }) {
           <Item>
             <NavigationLink to="/projects">projects</NavigationLink>
           </Item>
-          <Item>
+          {/* <Item>
             <NavigationLink to="/news">latest news</NavigationLink>
-          </Item>
+          </Item> */}
         </Menu>
 
         <Icon>

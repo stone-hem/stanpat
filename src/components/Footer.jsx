@@ -3,11 +3,15 @@ import facebook from "../assets/images/facebook-1.png";
 import instagram from "../assets/images/instagram.png";
 import youtube from "../assets/images/youtube.png";
 import steglitzer from "../assets/images/steglitzer.jpg";
+import site from "../assets/images/site.jpg";
 
 const Footer = () => {
   return (
     <Foot>
         <Bottom>
+        <Middle>
+        <img src={site} alt="" />
+        </Middle>
         <Left>
           <h3>About Us</h3>
           <p>
@@ -23,7 +27,7 @@ const Footer = () => {
             <img src={youtube} alt="" />
           </Media>
         </Left>
-        <Middle></Middle>
+      
         <Right>
           <img src={steglitzer} alt="" />
         </Right>
@@ -49,6 +53,11 @@ const Right = styled.div`
 `;
 const Middle = styled.div`
   flex: 1;
+  img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 `;
 
 const Media=styled.div`

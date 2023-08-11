@@ -93,6 +93,7 @@ const Values = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
+  margin-bottom: 40px;
 `;
 
 const Image = styled.section`

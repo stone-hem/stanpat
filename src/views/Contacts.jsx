@@ -1,22 +1,30 @@
 import styled from "styled-components";
+import location from "../assets/images/location.png";
+import email from "../assets/images/email.png";
+import address from "../assets/images/address.png";
+import call from "../assets/images/call.png";
 const Contacts = () => {
   return (
     <Section>
       <h3>Contact Us</h3>
       <Container>
         <Contact>
+          <img src={location} alt="" />
           <p>
             Along, Eastern By-pass, at Karuguru area, Next to RFH Hospital on
             Pondo Arcade, 3rd floor, Suite AC3.
           </p>
         </Contact>
         <Contact>
+        <img src={address} alt="" />
           <p>P.O. Box 50692 - 00200, Nairobi Kenya</p>
         </Contact>
         <Contact>
+        <img src={call} alt="" />
           <p>+254 729 389 494 -</p>
         </Contact>
         <Contact>
+        <img src={email} alt="" />
           <p>info@rnemoderntechnologies.com</p>
         </Contact>
       </Container>
@@ -105,6 +113,14 @@ const MapForm = styled.div`
 `;
 const Contact = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  img{
+    width:50px;
+    height: 50px;
+  }
 `;
 
 const Container = styled.div`
