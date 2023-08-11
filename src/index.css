@@ -1,13 +1,14 @@
 
 @font-face {
-  font-family: 'regular';
-  src: url(./assets/fonts/Lato-Regular.ttf);
+  font-family: 'light';
+  src: url(./assets/fonts/Lato-Light.ttf);
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'regular', sans-serif;
+  font-family: 'light', sans-serif;
   color: white;
+  font-weight: 600;
 }

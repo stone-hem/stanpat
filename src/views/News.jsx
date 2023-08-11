@@ -11,6 +11,5 @@ const News = () => {
 export default News
 
 const Section =styled.section`
-  height: 300vh;
   background-color: black;
 `
