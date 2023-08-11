@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import menu from "../assets/images/menu.png";
+import menu from "../assets/images/menu.svg";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 
@@ -17,17 +17,10 @@ export default function Navigation({ toggle }) {
         <h5>Hello!!! Find us on +254712345678</h5>
       </Header>
       <Container className={navColorChange ? "changeColor" : ""}>
-        <img src={logo} alt=""  className="logo"/>
+        <img src={logo} alt="" className="logo" />
         <Menu>
           <Item>
-            <NavigationLink
-              to="/home"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Home
-            </NavigationLink>
+            <NavigationLink to="/home">Home</NavigationLink>
           </Item>
           <Item>
             <NavigationLink to="/about">About</NavigationLink>
@@ -56,7 +49,7 @@ export default function Navigation({ toggle }) {
 
 const Header = styled.header`
   height: 35px;
-  background: #2E2E2E;
+  background: #2e2e2e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +67,11 @@ const Container = styled.nav`
   top: 0;
   z-index: 10;
   background: black;
-  .logo{
+  .logo {
     width: 200px;
+    @media screen and (max-width: 768px) {
+      width: 100px;
+    }
   }
   &.changeColor {
     background: black;
@@ -102,7 +98,7 @@ const Menu = styled.ul`
 const Item = styled.li`
   height: 60px;
   &:hover {
-    background: #0476D0;
+    background: #0476d0;
     transition: 1s ease;
     transform: scale(1.05);
     border-radius: 1rem;
@@ -119,7 +115,7 @@ const NavigationLink = styled(NavLink)`
   height: 100%;
   cursor: pointer;
   &.active {
-    background: #0476D0;
+    background: #0476d0;
     border-radius: 8px;
   }
 `;
@@ -129,8 +125,9 @@ const Icon = styled.span`
     padding: 8px;
     border: none;
     border-radius: 8px;
-    height: 60px;
-    background-color: #0476D0;
+    height: 40px;
+    width: 40px;
+    background-color: #0476d0;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -140,11 +137,12 @@ const Icon = styled.span`
     @media screen and (max-width: 768px) {
       display: block;
       position: absolute;
-      top: 0;
+      top: 25%;
       right: 0;
       transform: translate(-100%, 60%);
-      width: 2rem;
-      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      border-radius: 8px;
       border: yellow;
       cursor: pointer;
       background-color: white;

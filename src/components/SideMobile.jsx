@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import close from '../assets/images/close.png'
+import close from '../assets/images/close.svg'
+import { Link } from "react-router-dom";
+
 
 function SideMobile({isOpen,toggle}) {
   return (
@@ -9,12 +11,11 @@ function SideMobile({isOpen,toggle}) {
         </Icon>
         <Wrap>
             <Menu>
-                <SideLink to="home" onClick={toggle}>Home</SideLink>
-                <SideLink to="about" onClick={toggle}>About</SideLink>
-                <SideLink to="skills" onClick={toggle}>Skills</SideLink>
-                <SideLink to="services" onClick={toggle}>Services</SideLink>
-                <SideLink to="portfolio" onClick={toggle}>Portfolio</SideLink>
-                <SideLink to="contact" onClick={toggle}>Contact</SideLink>
+                <SideLink to="/home" >Home</SideLink>
+                <SideLink to="/about" >About</SideLink>
+                <SideLink to="/services" >Services</SideLink>
+                <SideLink to="/projects" >Projects</SideLink>
+                <SideLink to="/contacts" >Contact</SideLink>
             </Menu>
         </Wrap>
     </Container>
@@ -41,13 +42,20 @@ top:${({isOpen})=>(isOpen ? '0':'-100%')};
 
 const Icon=styled.div`
 position:absolute;
-top:1.2rem;
-right:1.5rem;
+top:5px;
+right:5px;
 background:white;
-font-size:1.5rem;
+font-size:1rem;
 cursor:pointer;
 color: white;
 outline:none;
+width: 20px;
+height: 20px;
+border-radius: 8px;
+img{
+    width: 100%;
+    object-fit: contain;
+}
 `
 
 
@@ -61,14 +69,13 @@ grid-template-columns:1fr;
 grid-template-rows:repeat(6,60px);
 text-align:center;
 justify-content:center;
-
 @media screen and(max-width:480px){
     grid-template-rows:repeat(6,40px);
 }
 
 `
 
-const SideLink=styled.a`
+const SideLink=styled(Link)`
 display:flex;
 align-items:center;
 justify-content:center;

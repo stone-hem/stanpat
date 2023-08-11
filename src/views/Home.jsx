@@ -134,6 +134,9 @@ const Values = styled.div`
   display: flex;
   gap: 20px;
   width: 60%;
+  @media screen and (max-width:768px){
+    display: none;
+  }
 `;
 
 const Value = styled.div`
@@ -189,6 +192,9 @@ const Body = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  @media screen and (max-width:768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Featured = styled.div`
@@ -202,6 +208,9 @@ const Featured = styled.div`
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 40px;
+  @media screen and (max-width:768px){
+    width: 90%;
+  }
 `;
 
 const About = styled.section`

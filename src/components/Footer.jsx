@@ -75,13 +75,16 @@ const Left = styled.div`
 `;
 
 const Bottom = styled.div`
-  height: 400px;
+  height: auto;
   width: 100%;
   background-color: #2e2e2e;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  @media screen and (max-width:768px){
+    flex-direction: column;
+  }
 `;
 
 const BottomText = styled.div`

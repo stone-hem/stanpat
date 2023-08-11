@@ -102,6 +102,10 @@ const Featured = styled.div`
   width: 100%;
   padding: 10px;
   margin-bottom: 40px;
+  @media screen and (max-width:768px){
+    grid-template-columns: repeat(1,1fr);
+    padding: 5;
+  }
 `;
 
 const Container = styled.div`

@@ -94,6 +94,10 @@ const Values = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   margin-bottom: 40px;
+  @media screen and (max-width:768px){
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 30px;
+  }
 `;
 
 const Image = styled.section`
@@ -117,6 +121,10 @@ const Container = styled.section`
   display: flex;
   gap: 20px;
   padding: 20px 100px;
+  @media screen and (max-width:768px){
+    flex-direction: column;
+    padding: 5px;
+  }
 `;
 
 const Section = styled.section`

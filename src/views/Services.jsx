@@ -63,9 +63,11 @@ const Service=styled.div`
   flex-direction:column;
   h2{
     flex:1;
+    text-align: center;
   }
   p{
     flex:1;
+    text-align: center;
   }
   button{
     width: 100%;
@@ -84,6 +86,10 @@ const Grid=styled.div`
   width: 100%;
   padding: 20px;
   margin-bottom: 40px;
+  @media screen and (max-width:768px){
+    grid-template-columns: repeat(1,1fr);
+    padding: 5;
+  }
 `
 
 const Section = styled.section`
@@ -97,5 +103,8 @@ const Section = styled.section`
   p{
     max-width: 50%;
     text-align: center;
+    @media screen and (max-width:768px){
+    max-width: 90%;
+  }
   }
 `;
