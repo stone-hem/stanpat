@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import project from "../assets/images/project.jpg";
+import { projectData } from "../../data";
 const Projects = () => {
   return (
     <Section>
@@ -10,55 +11,14 @@ const Projects = () => {
       </Container>
       <h3>Our Projects</h3>
       <Featured>
-        <Project>
-          <Bottom>
-            <p>
-              Two Rivers Development Limited Infrastructure, Retail
-              entertainment and Lifestyle, and Parking Silo at Runda, Nairobi
-            </p>
-          </Bottom>
-        </Project>
-        <ProjectOne>
-          <Bottom>
-            <p>
-              Britam Towers for British American Insurance Ltd (Kenya) at Upper
-              hill Nairobi.
-            </p>
-          </Bottom>
-        </ProjectOne>
-        <ProjectTwo>
-          <Bottom>
-            <p>Tenwek Mission Hospital Eye and Dental Clini</p>
-          </Bottom>
-        </ProjectTwo>
-        <ProjectThree>
-          <Bottom>
-            <p>
-              Lusail Expressway Artscape in Doha City–Design Engineer
-              responsible for the design review of all the streetlighting,
-              intelligent information systems as well as the
-              landscaping/artscape lighing systems and local utility authorities
-              liasion.
-            </p>
-          </Bottom>
-        </ProjectThree>
-        <ProjectFour>
-          <Bottom>
-            <p>
-              Al Farjan Projects, four sports facilities (stadia) for the Qatar
-              Olympic Committee: AECOM Project.
-            </p>
-          </Bottom>
-        </ProjectFour>
-        <ProjectFive>
-          <Bottom>
-            <p>
-              American Community School- Admin block, Tuition Blocks, Libraries
-              and Sports facilities
-            </p>
-          </Bottom>
-        </ProjectFive>
-       
+        {
+          projectData.map((item)=>(
+            <Project key={item.id}>
+            <img src={item.image} alt="" />
+            <p>{item.desc}</p>
+          </Project>
+          ))
+        }
       </Featured>
     </Section>
   );
@@ -66,73 +26,21 @@ const Projects = () => {
 
 export default Projects;
 
-const Bottom = styled.div`
-  max-height: 50%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  p {
-    text-align: center;
-  }
-`;
 
 const Project = styled.div`
   height: 200px;
-  margin: 5px;
-  background-image: url("rivers.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
-`;
-
-const ProjectOne = styled.div`
-  height: 200px;
-  margin: 5px;
-  background-image: url("britam.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
-`;
-
-const ProjectTwo = styled.div`
-  height: 200px;
-  margin: 5px;
-  background-image: url("tenwek.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
-`;
-
-const ProjectThree = styled.div`
-  height: 200px;
-  margin: 5px;
-  background-image: url("lusail.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
-`;
-
-const ProjectFour = styled.div`
-  height: 200px;
-  margin: 5px;
-  background-image: url("construction.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
-`;
-
-const ProjectFive = styled.div`
-  height: 200px;
-  margin: 5px;
-  background-image: url("american.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: flex-end;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  p {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+  }
 `;
 
 const Featured = styled.div`
