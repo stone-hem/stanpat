@@ -5,15 +5,15 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!open);
   };
 
   return (
     <>
-      <SideMobile isOpen={isOpen} toggle={toggle} />
+      <SideMobile open={open} toggle={toggle} />
       <Navigation toggle={toggle} />
      <Outlet/>
      <Footer/>

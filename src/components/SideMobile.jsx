@@ -3,9 +3,9 @@ import close from '../assets/images/close.svg'
 import { Link } from "react-router-dom";
 
 
-function SideMobile({isOpen,toggle}) {
+function SideMobile({open,toggle}) {
   return (
-    <Container isOpen={isOpen} onClick={toggle}>
+    <Container open={open} onClick={toggle}>
         <Icon onClick={toggle}>
             <img src={close} alt="" />
         </Icon>
@@ -35,8 +35,8 @@ align-items:center;
 top:0;
 right:0;
 transition:1s ease-in-out;
-opacity:${({isOpen})=>(isOpen ? '100%':'0')};
-top:${({isOpen})=>(isOpen ? '0':'-100%')};
+opacity:${({open})=>(open ? '100%':'0')};
+top:${({open})=>(open ? '0':'-100%')};
 
 `
 

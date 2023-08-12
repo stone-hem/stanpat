@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -31,7 +32,7 @@ const Home = () => {
           <Container>
             <h2>Welcome to</h2>
             <h2>Stanpat Global Limited</h2>
-            <button>About Us</button>
+            <Link to="/about"><button >About Us</button></Link>
             <Values>
               <Value>
                 <h3>Our Mission</h3>

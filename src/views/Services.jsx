@@ -7,7 +7,7 @@ const Services = () => {
   const [isModal, setIsModal] = useState(false);
   const setModal = (item) => {
     useEffect(() => {
-      setIsModal(true)
+      
     },[]);
   };
   return (
@@ -26,7 +26,7 @@ const Services = () => {
             </Image>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button onClick={setModal(item)}>Read More...</button>
+            <button onClick={() => setIsModal(true)}>Read More...</button>
           </Service>
         ))}
         {isModal && (
