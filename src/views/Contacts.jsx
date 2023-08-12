@@ -11,26 +11,35 @@ const Contacts = () => {
         <Contact>
           <img src={location} alt="" />
           <p>
-            Along, Eastern By-pass, at Karuguru area, Next to RFH Hospital on
-            Pondo Arcade, 3rd floor, Suite AC3.
+          Muthaiga Suites - Thika Road
           </p>
         </Contact>
         <Contact>
-        <img src={address} alt="" />
-          <p>P.O. Box 50692 - 00200, Nairobi Kenya</p>
+          <img src={address} alt="" />
+          <p>Farm Practice International, Muthaiga Suites, Thika Rd, Nairobi</p>
         </Contact>
         <Contact>
-        <img src={call} alt="" />
-          <p>+254 729 389 494 -</p>
+          <img src={call} alt="" />
+          <p>+254 723810154</p>
         </Contact>
         <Contact>
-        <img src={email} alt="" />
-          <p>info@rnemoderntechnologies.com</p>
+          <img src={email} alt="" />
+          <p>info@stanaptglobal.co.ke</p>
         </Contact>
       </Container>
       <hr />
       <MapForm>
-        <Map></Map>
+        <Map>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.848160715492!2d36.83572258885497!3d-1.2635471999999732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173be55aaaab%3A0x78ab134a6a99ca00!2sMuthaiga%20Suites%20-%20Thika%20Road!5e0!3m2!1sen!2ske!4v1691847724377!5m2!1sen!2ske"
+            width="600"
+            height="450"
+            style={{border:0}}
+            allowfullscreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Map>
         <Form>
           <Flex>
             <label htmlFor="firstName">
@@ -55,7 +64,12 @@ const Contacts = () => {
 
           <label htmlFor="message">
             Your Message*
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
           </label>
           <button>Submit</button>
         </Form>
@@ -76,13 +90,13 @@ const Form = styled.form`
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  textarea{
-    border-radius:8px;
+  textarea {
+    border-radius: 8px;
     color: black;
     padding: 10px;
   }
-  button{
-    background-color: #0476D0;
+  button {
+    background-color: #0476d0;
     color: black;
     border: none;
     padding: 8px;
@@ -103,7 +117,6 @@ const Form = styled.form`
 `;
 const Map = styled.div`
   flex: 1;
-  border: 1px solid yellow;
 `;
 const MapForm = styled.div`
   display: flex;
@@ -117,8 +130,8 @@ const Contact = styled.div`
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  img{
-    width:50px;
+  img {
+    width: 50px;
     height: 50px;
   }
 `;

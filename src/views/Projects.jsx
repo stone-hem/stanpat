@@ -98,7 +98,7 @@ const ProjectOne = styled.div`
 const ProjectTwo = styled.div`
   height: 200px;
   margin: 5px;
-  background-image: url("tenwek.jpg");
+  background-image: url("tenwek.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

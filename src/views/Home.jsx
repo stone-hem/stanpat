@@ -82,7 +82,7 @@ const Home = () => {
         <h3>About</h3>
         <h3>Stanpat Global Limited</h3>
         <p>
-          WWe specialize in offering Mechanical and Electrical Engineering
+          We specialize in offering Mechanical and Electrical Engineering
           services to our clients. Our team of professionals includes Mechanical
           Engineers, Electrical Engineers, and Environmental Professionals,
           Project managers, droughts-men and other support staff. We are
