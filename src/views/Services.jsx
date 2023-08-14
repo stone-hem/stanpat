@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { serviceData } from "../../data";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   const [isModal, setIsModal] = useState(false);
