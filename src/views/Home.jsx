@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { homeProjects } from "../../data";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,10 +11,23 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <Section>
+      <Helmet>
+        <title>Home - Stanpat Global Limited</title>
+        <meta
+          name="Home"
+          content="We’re a leading engineering, technology and energy services
+          company that helps our clients meet the world’s evolving energy
+          needs. We use our engineering know-how and our consultancy
+          expertise to design, build, and operate world-class energy and
+          infrastructural facilities that are engineered for safety and
+          optimal efficiency."
+        />
+      </Helmet>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -32,7 +46,9 @@ const Home = () => {
           <Container>
             <h2>Welcome to</h2>
             <h2>Stanpat Global Limited</h2>
-            <Link to="/about"><button >About Us</button></Link>
+            <Link to="/about">
+              <button>About Us</button>
+            </Link>
             <Values>
               <Value>
                 <h3>Our Mission</h3>
@@ -97,54 +113,16 @@ const Home = () => {
       <Featured>
         <h3>Featured Projects</h3>
         <Body>
-          <Card>
-            <Top>
-              <h4>2000- 2006</h4>
-            </Top>
-            <Bottom>
-              <p>Olkaria II Geothermal Power Station, Kenya</p>
-            </Bottom>
-          </Card>
-          <Card>
-            <Top>
-              <h4>1997 – 2000</h4>
-            </Top>
-            <Bottom>
-              <p>Egerton University Physical Sciences Complex, Lecture theatres and Labs</p>
-            </Bottom>
-          </Card>
-          <Card>
-            <Top>
-              <h4>1997 – 2000</h4>
-            </Top>
-            <Bottom>
-              <p>Kenya Agricultural Research Institute (KARI)- Kitale, Kisii and Perkerra stations</p>
-            </Bottom>
-          </Card>
-          <Card>
-            <Top>
-              <h4>2006 to 2012</h4>
-            </Top>
-            <Bottom>
-              <p>Yas Water Park, Yas Island, Abu Dhabi, UAE</p>
-            </Bottom>
-          </Card>
-          <Card>
-            <Top>
-              <h4>2006 to 2012</h4>
-            </Top>
-            <Bottom>
-              <p>Al Forsan Hotel,Abu Dhabi International Shooting Club, Abu Dhabi, UAE</p>
-            </Bottom>
-          </Card>
-          <Card>
-            <Top>
-              <h4>2008 - 2013</h4>
-            </Top>
-            <Bottom>
-              <p>Lusail Expressway Artscape in Doha City–Design</p>
-            </Bottom>
-          </Card>
+          {homeProjects.map((item) => (
+            <Card key={item.id}>
+              <Top>
+                <h4>{item.status}</h4>
+              </Top>
+              <Bottom>
+                <p>{item.project}</p>
+              </Bottom>
+            </Card>
+          ))}
         </Body>
       </Featured>
     </Section>

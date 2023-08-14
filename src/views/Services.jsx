@@ -12,6 +12,16 @@ const Services = () => {
   };
   return (
     <Section>
+       <Helmet>
+        <title>Services - Stanpat Global Limited</title>
+        <meta
+          name="Services"
+          content="We use our engineering know-how and our consultancy
+          expertise to design, build, and operate world-class energy and
+          infrastructural facilities that are engineered for safety and
+          optimal efficiency."
+        />
+      </Helmet>
       <h3>Our Services</h3>
       <p>
         Our services span the entire project life-cycle. We take the project
@@ -26,7 +36,7 @@ const Services = () => {
             </Image>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button onClick={() => setIsModal(true)}>Read More...</button>
+            <button onClick={() => setIsModal(false)}>Read More...</button>
           </Service>
         ))}
         {isModal && (

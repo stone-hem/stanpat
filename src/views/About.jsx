@@ -3,10 +3,23 @@ import about from "../assets/images/about.png";
 import mission from "../assets/images/mission.png";
 import purpose from "../assets/images/purpose.png";
 import vision from "../assets/images/vision.png";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <Section>
+       <Helmet>
+        <title>About Us - Stanpat Global Limited</title>
+        <meta
+          name="About Us"
+          content="We’re a leading engineering, technology and energy services
+          company that helps our clients meet the world’s evolving energy
+          needs. We use our engineering know-how and our consultancy
+          expertise to design, build, and operate world-class energy and
+          infrastructural facilities that are engineered for safety and
+          optimal efficiency."
+        />
+      </Helmet>
       <h3>About Us</h3>
       <Container>
         <Content>
@@ -97,7 +110,6 @@ const Values = styled.section`
 `;
 
 const Image = styled.section`
-  border: 1px solid #0476d0;
   flex: 1;
   border-radius: 8px;
   img {

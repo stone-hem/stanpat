@@ -6,6 +6,13 @@ import call from "../assets/images/call.png";
 const Contacts = () => {
   return (
     <Section>
+       <Helmet>
+        <title>Contact Us - Stanpat Global Limited</title>
+        <meta
+          name="Contact Us"
+          content="Reach us easily on info@stanaptglobal.co.ke"
+        />
+      </Helmet>
       <h3>Contact Us</h3>
       <Container>
         <Contact>

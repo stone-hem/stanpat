@@ -1,9 +1,20 @@
 import styled from "styled-components";
 import project from "../assets/images/project.jpg";
 import { projectData } from "../../data";
+import { Helmet } from "react-helmet-async";
 const Projects = () => {
   return (
     <Section>
+       <Helmet>
+        <title>Projects - Stanpat Global Limited</title>
+        <meta
+          name="Projects"
+          content="We use our engineering know-how and our consultancy
+          expertise to design, build, and operate world-class energy and
+          infrastructural facilities that are engineered for safety and
+          optimal efficiency."
+        />
+      </Helmet>
       <h3>Our Projects</h3>
       <Container>
         <h3>Project Execution Process</h3>
